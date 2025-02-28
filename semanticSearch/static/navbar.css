@@ -1,0 +1,30 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.myDiv {
+    width: 100% !important;
+    background-color: #555 !important;
+    overflow: auto !important;
+}
+
+.myDiv a {
+    float: right !important;
+    padding: 12px !important;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 17px !important;
+}
+
+.myDiv a:hover {
+    background-color: #000 !important;
+}
+
+.custom-active {
+    background-color: #007bff !important;
+}
+
+@media screen and (max-width: 500px) {
+.myDiv a {
+        float: none !important;
+        display: block !important;
+    }
+}

@@ -1,0 +1,35 @@
+[
+{
+   "model": "searchApp.userdata",
+   "pk": 1,
+   "fields": {
+      "name": "3 Minute Thesis 2017 - Michael Miljanovic",
+      "url": "https://www.youtube.com/watch?v=f98tNbhYyL8&t=27s",
+      "source": "YouTube",
+      "language": "en",
+      "file": "media/video1.mp4"
+   }
+},
+{
+   "model": "searchApp.userdata",
+   "pk": 2,
+   "fields": {
+      "name": " The Book of Job's Wisdom on How God Runs the World",
+      "url": "https://www.youtube.com/watch?v=GswSg2ohqmA&t=4s",
+      "source": "YouTube",
+      "language": "en",
+      "file": "media/video2.mp4"
+   }
+},
+{
+   "model": "searchApp.userdata",
+   "pk": 3,
+   "fields": {
+      "name": "Book of Acts Summary: A Complete Animated Overview (Part 1)",
+      "url": "https://www.youtube.com/watch?v=CGbNw855ksw&t=197s",
+      "source": "YouTube",
+      "language": "en",
+      "file": "media/video3.mp4"
+   }
+}
+]

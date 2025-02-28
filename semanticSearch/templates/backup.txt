@@ -1,0 +1,91 @@
+{% block style %}
+
+<style>
+    /* Custom drag-and-drop area styling */
+    .drag-drop-area {
+        border: 2px dashed #007bff;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+        color: #6c757d;
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    .drag-drop-area.dragover {
+        background-color: #e9ecef;
+        color: #007bff;
+    }
+</style>
+
+{% endblock style %}
+
+    <div class="container d-flex justify-content-center align-items-center" style="max-width: 500px; background-color: rgb(71, 151, 192);">
+        <div class="card shadow-lg" style="width: 100%; max-width: 500px; border: none; background-color: rgb(166, 207, 227);">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Upload Your Video</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-4 d-flex align-items-center justify-content-center">
+                        {{ form.name|add_label_class:"block mb-2 text-sm font-medium text-gray-900 dark:text-white" }}
+                        {% render_field form.name class="block mb-2 mx-auto form-control" id="nameInput" %}
+                    </div>                    
+                    
+                    <div class="mb-4">
+                        {{ form.video|add_label_class:"form-label block mb-2 text-sm font-medium" }}
+                        <div 
+                            id="drag-drop-area" 
+                            class="drag-drop-area"
+                            onclick="document.getElementById('file-input').click()">
+                            <p class="mb-2">Drag & Drop your video here or click to select</p>
+                            <span class="text-muted">(Only .mp4, .mov files are allowed)</span>
+                        </div>
+                        {% render_field form.video class="hidden-input" id="file-input" style="display: none;" %}
+                    </div>
+    
+                    <div class="d-grid">
+                        <input type="submit" value="Submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle drag-and-drop
+        const dragDropArea = document.getElementById('drag-drop-area');
+        const fileInput = document.getElementById('file-input');
+    
+        // Show dragover effect
+        dragDropArea.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            dragDropArea.classList.add('dragover');
+        });
+    
+        // Remove dragover effect
+        dragDropArea.addEventListener('dragleave', () => {
+            dragDropArea.classList.remove('dragover');
+        });
+    
+        // Handle file drop
+        dragDropArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+            dragDropArea.classList.remove('dragover');
+    
+            // Get the dropped files
+            const files = event.dataTransfer.files;
+    
+            // Assign the files to the hidden input
+            fileInput.files = files;
+        });
+    
+        // Trigger file input on click
+        dragDropArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+    
+        // Handle file input change (in case user selects via the dialog)
+        fileInput.addEventListener('change', () => {
+            // Optionally, you could add code here to display the selected file name in the drag-drop area.
+        });
+    </script>

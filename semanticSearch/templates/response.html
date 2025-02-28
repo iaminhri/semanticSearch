@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}  
+{% load widget_tweaks %}
+
+{% block body %}   
+    <div class="container mt-5">
+        {% if status == "completed" %}
+            <div class="alert alert-success">
+                <h1>Status: Completed</h1>
+                <h2>Exit Code: 0 </h2>
+                <h3>Standard Output: Process Completed </h3>
+                <h3>Standard Error: No Errors</h3>
+                <div class="d-grid">
+                    <a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        {% elif status == "error" %}
+            <div class="alert alert-danger">
+                <h1>Status: Error</h1>
+                <h2>Error Message: Unknown </h2>
+                <div class="d-grid">
+                    <a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning">
+                <h1>Status: Unknown</h1>
+                <p>Unexpected result encountered.</p>
+                <div class="d-grid">
+                    <a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock body %}   

@@ -1,0 +1,144 @@
+{
+  "5": {
+    "metaData": {
+      "video_id": "video6",
+      "video_title": "Book of Daniel Summary: A Complete Animated Overview",
+      "url": "https://www.youtube.com/watch?v=9cSC9uobtPM&t=3s",
+      "source": "YouTube",
+      "language": "en",
+      "filePath": "media/video6.mp4"
+    },
+    "searchResult": [
+      {
+        "id": "0_10",
+        "video_id": "video6",
+        "text": "the book's language.",
+        "caption": "",
+        "start_timestamp": 43,
+        "end_timestamp": 45,
+        "score": 0.5854690670967102,
+        "searchKey": "books"
+      }
+    ]
+  },
+  "1": {
+    "metaData": {
+      "video_id": "video2",
+      "video_title": "The Book of Job's Wisdom on How God Runs the World",
+      "url": "https://www.youtube.com/watch?v=GswSg2ohqmA&t=5s",
+      "source": "YouTube",
+      "language": "en",
+      "filePath": "media/video2.mp4"
+    },
+    "searchResult": [
+      {
+        "id": "0_111",
+        "video_id": "video2",
+        "text": "fear of the Lord.",
+        "caption": "a mirror, a book and a book cover",
+        "start_timestamp": 375,
+        "end_timestamp": 376,
+        "score": 0.4942004084587097,
+        "searchKey": "books"
+      },
+      {
+        "id": "0_111",
+        "video_id": "video2",
+        "text": "fear of the Lord.",
+        "caption": "a mirror, a book and a book cover",
+        "start_timestamp": 375,
+        "end_timestamp": 376,
+        "score": 0.33833733201026917,
+        "searchKey": "chapter"
+      }
+    ]
+  },
+  "2": {
+    "metaData": {
+      "video_id": "video3",
+      "video_title": "Book of Acts Summary: A Complete Animated Overview (Part 1)",
+      "url": "https://www.youtube.com/watch?v=CGbNw855ksw&t=5s",
+      "source": "YouTube",
+      "language": "en",
+      "filePath": "media/video3.mp4"
+    },
+    "searchResult": [
+      {
+        "id": "0_34",
+        "video_id": "video3",
+        "text": "chapter.",
+        "caption": "",
+        "start_timestamp": 144,
+        "end_timestamp": 145,
+        "score": 0.9094672203063965,
+        "searchKey": "chapter"
+      }
+    ]
+  },
+  "6": {
+    "metaData": {
+      "video_id": "video7",
+      "video_title": "Books of Ezra-Nehemiah Summary: A Complete Animated Overview",
+      "url": "https://www.youtube.com/watch?v=MkETkRv9tG8",
+      "source": "YouTube",
+      "language": "en",
+      "filePath": "media/video7.mp4"
+    },
+    "searchResult": [
+      {
+        "id": "0_125",
+        "video_id": "video7",
+        "text": "of the Bible?",
+        "caption": "",
+        "start_timestamp": 460,
+        "end_timestamp": 461,
+        "score": 0.6614881753921509,
+        "searchKey": "bible"
+      }
+    ]
+  },
+  "9": {
+    "metaData": {
+      "video_id": "video10",
+      "video_title": "How God Deals With Evil Without Destroying Humanity",
+      "url": "https://www.youtube.com/watch?v=G_OlRWGLdnw",
+      "source": "YouTube: Bible Project",
+      "language": "en",
+      "filePath": "media/video10.mp4"
+    },
+    "searchResult": [
+      {
+        "id": "0_16",
+        "video_id": "video10",
+        "text": "This God is so good that not only is He going to rid the world of evil, he's going to do it without destroying humanity.",
+        "caption": "a book with the words holy bible on it",
+        "start_timestamp": 66,
+        "end_timestamp": 73,
+        "score": 0.6483500003814697,
+        "searchKey": "bible"
+      }
+    ]
+  },
+  "3": {
+    "metaData": {
+      "video_id": "video4",
+      "video_title": "Book of Ezekiel Summary: A Complete Animated Overview (Part 2)",
+      "url": "https://www.youtube.com/watch?v=SDeCWW_Bnyw",
+      "source": "YouTube",
+      "language": "en",
+      "filePath": "media/video4.mp4"
+    },
+    "searchResult": [
+      {
+        "id": "0_79",
+        "video_id": "video4",
+        "text": "But chapter 11, it's a key transition and it helps us understand how the rest of the book",
+        "caption": "a map of the world with a lot of different things",
+        "start_timestamp": 292,
+        "end_timestamp": 296,
+        "score": 0.457836776971817,
+        "searchKey": "chapter,bible"
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+<!-- {% extends "base.html" %}
+{% load static %}  
+{% load widget_tweaks %}
+
+{% block body %}    -->
+<!DOCTYPE html>
+{% load static %}  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Semantic Search</title>    
+    
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .not-visible {
+            display: none;
+        }
+    </style>
+
+</head>
+<body class="bg-dark">
+    <div class="myDiv bg-secondary bg-gradient">
+        <a class="custom-active" href="{% url 'home' %}"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href=" {% url 'upload' %} "><i class="fa fa-fw fa-cloud-upload"></i> Upload Video</a> 
+        <a href="{% url 'train' %}"><i class="fa fa-cogs"></i> Index Videos </a> 
+        <a href="{% url 'serve' %}"><i class="fa fa-folder-open"></i> Video Archive </a> 
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="card w-100 shadow-lg bg-gradient" style="width: 100%; max-width: 500px;">
+            <div class="card-body mx-2">
+                <h2 class="card-title text-center mb-4">Upload Your Video</h2>
+
+                <form id= "upload-form" action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="mb-4">
+                        {{ form.name|add_label_class:"form-label" }}
+                        {% render_field form.name class="form-control" %}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.url|add_label_class:"form-label" }}
+                        {% render_field form.url class="form-control" %}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.source|add_label_class:"form-label" }}
+                        {% render_field form.source class="form-control" %}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.language|add_label_class:"form-label" }}
+                        {% render_field form.language class="form-control" %}
+                    </div>
+
+                    <div class="mb-4">
+                        {{ form.file|add_label_class:"form-label" }}
+                        {% render_field form.file class="form-control" multiple="multiple"%}
+                    </div>
+
+                    <div class="d-grid mt-5">
+                        <input type="submit" multiple value="Upload" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+            <div id="progress-box" class="not-visible">
+                
+            </div>
+            <div id="cancel-box" class="not-visible">
+                <button id="cancel-btn" class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const uploadForm = document.getElementById('upload-form');
+            const input = document.getElementById('id_file');
+            const progressBox = document.getElementById('progress-box');
+            const progressBar = document.createElement('div');
+            progressBar.className = "progress-bar bg-success";
+            progressBar.setAttribute("role", "progressbar");
+            progressBar.setAttribute("aria-valuenow", "0");
+            progressBar.setAttribute("aria-valuemin", "0");
+            progressBar.setAttribute("aria-valuemax", "100");
+            progressBar.style.width = "0%";
+            progressBox.appendChild(progressBar);
+    
+            const cancelBox = document.getElementById('cancel-box');
+            const cancelBtn = document.getElementById('cancel-btn');
+            const csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+    
+            uploadForm.addEventListener('submit', function(e){
+                e.preventDefault(); 
+    
+                progressBox.classList.remove('not-visible');
+                cancelBox.classList.remove('not-visible');
+    
+                const formData = new FormData(this);
+                formData.append('csrfmiddlewaretoken', csrfToken);
+    
+                $.ajax({
+                    type: 'POST',
+                    url: uploadForm.action, // Make sure to use the form's action attribute
+                    enctype: 'multipart/form-data',
+                    data: formData,
+                    xhr: function() {
+                        const xhr = new window.XMLHttpRequest();
+                        xhr.upload.addEventListener('progress', function(e) {
+                            if (e.lengthComputable) {
+                                const percent = (e.loaded / e.total) * 100;
+                                progressBar.style.width = percent + "%";
+                                progressBar.setAttribute("aria-valuenow", percent);
+                                progressBar.innerHTML = percent.toFixed(1) + "%";
+                            }
+                        });
+                        return xhr;
+                    },
+                    beforeSend: function() {
+                        progressBar.style.width = "0%";
+                        progressBar.innerHTML = "0%";
+                    },
+                    success: function(response) {
+                        console.log("Success: ", response);
+                        progressBar.innerHTML = "Upload Complete";
+                        progressBar.className = "progress-bar bg-success";
+                    },
+                    error: function(error) {
+                        console.log("Error: ", error);
+                        progressBar.className = "progress-bar bg-danger";
+                        progressBar.innerHTML = "Failed";
+                    },
+                    complete: function() {
+                        cancelBox.classList.add('not-visible');
+                    },
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                });
+            });
+    
+            cancelBtn.addEventListener('click', function(){
+                console.log("Upload cancelled.");
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
+    
+    
+    
+    
+
+<!-- {% endblock body %} -->

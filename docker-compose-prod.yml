@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  app:
+    image: iaminhridoy/semanticvideosearch-app:researchproject
+    depends_on:
+      - proxy
+    networks:
+      - app-network
+    environment:
+      - DB_HOST=db
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - SECRET_KEY=${SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}  
+
+  proxy:
+    image: iaminhridoy/semanticsearch:researchproject
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  static-data:

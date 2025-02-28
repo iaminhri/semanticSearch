@@ -1,0 +1,9 @@
+.DS_Store
+.dockerignore
+.env
+.env.sample
+backup/*
+modifiedSettings.py
+venv/*
+semanticSearch/media/*
+

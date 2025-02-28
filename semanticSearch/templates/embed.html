@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}  
+{% load widget_tweaks %}
+
+{% block meta %}
+    <meta http-equiv="refresh" content="5">
+{% endblock meta %}
+{% block body %}  
+
+    <div class="container d-flex flex-column justify-content-center align-items-center" style="max-width: 1000px; border: none; box-shadow: none;">
+        <h1>{{ data }}</h1>
+        <br>
+        <div class="card p-1 mt-3" style="width: 100%; max-width: 200px;">
+            <form action="{% url 'home' %}">
+                <input type="submit" value="Go Back" class="btn btn-primary w-100">
+            </form>
+        </div>
+    </div>
+    
+
+{% endblock body %}

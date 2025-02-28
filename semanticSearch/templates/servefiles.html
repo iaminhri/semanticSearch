@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}  
+{% load widget_tweaks %}
+
+{% block body %}  
+    <div class="container mt-3">
+        <!-- <div class="progress" style="margin-top: 20px;">
+            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+        <div id="progress-status" class="alert alert-info mt-2">Please Click on Index Videos</div> -->
+        <form class="d-flex justify-content-center" action="{% url 'train' %}">
+            {% csrf_token%}
+            <button type="submit" class="btn btn-light btn-lg" style="width: 400px;">Index Videos</button>
+        </form>
+    </div>
+    <div class="container-fluid mt-4">
+        <div class="row g-4">
+            {% for data in userdata %}
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 position-relative">
+                        <button class="btn-close position-absolute" style="top: 10px; right: 10px; z-index: 10;" onclick="removeCard(this)"></button>
+                        
+                        <div class="card-body p-2">
+                            <h6 class="card-title text-truncate text-center" style="font-weight: bold; color: #333;">
+                                {{ data.name }}
+                            </h6>
+                        </div>
+                        
+                        <video 
+                            src="{{ data.file.url }}" 
+                            style="width: 100%; height: 70%; object-fit: cover; border-radius: 5px;" 
+                            controls>
+                        </video>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>    
+
+    <script>
+        function removeCard(button) {
+            const card = button.closest('.col-sm-6');
+            card.remove(); 
+        }
+    </script>
+{% endblock body %}
