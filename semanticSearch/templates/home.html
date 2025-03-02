@@ -10,7 +10,7 @@
                        <h1 class="text-center mb-3">Search In Videos</h1>
                        <form class="d-flex flex-column align-items-center", action="{% url 'search' %}">
                            {% csrf_token %}
-                           <input type="text" class="form-control" name="searchInput" placeholder="Search for videos..." aria-label="Search for videos" aria-describedby="button-addon2">
+                           <input type="text" class="form-control" name="searchInput" placeholder="Search for videos: Single Query or seperate by comma for multi-query. E.g: books, learnings" aria-label="Search for videos" aria-describedby="button-addon2">
                            <button class="btn btn-dark mt-4" type="submit" id="button-addon2">Search</button>
                        </form>
                    </div>
