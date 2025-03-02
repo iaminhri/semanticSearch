@@ -32,8 +32,8 @@ def getAudiosByIndex(videoDir, extensionList, startIndex):
     for video in videoFiles:
         audioFileName = os.path.splitext(os.path.basename(video))[0] + '.wav'
         print("audio filename: ", os.path.splitext(os.path.basename(video))[0] + '.wav')
-        # AudioSegment.from_file(video).export("/vol/web/media/audio/"+audioFileName, format="wav")
-        AudioSegment.from_file(video).export("../audio/"+audioFileName, format="wav")
+        AudioSegment.from_file(video).export("/vol/web/media/audio/"+audioFileName, format="wav")
+        # AudioSegment.from_file(video).export("../audio/"+audioFileName, format="wav")
 
 def deleteVideos(videoDir):
     fileNames = os.listdir(videoDir)  

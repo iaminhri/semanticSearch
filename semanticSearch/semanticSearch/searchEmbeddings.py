@@ -38,15 +38,14 @@ def searchInEmbeddingsDB_multiquery(query_list, embeddings):
         formattedOutput = exportOutput(search_results, load_transripts, formattedOutput, query)
         formattedOutput = exportOutput(uniqueCapResults, load_transripts, formattedOutput, query)
     
-    print(len(query_list))
-    print(query_list)
+    # sys.stderr.write(len(query_list))
+    # sys.stderr.write(query_list)
 
     for i in range(len(query_list) - 1):
         multiQuery = f"""select id, text, caption, metadata, score from txtai \
                                     where similar('{query_list[i]}', 'text') and  
                                     similar('{query_list[i+1]}', 'captions') and score >= 0.30"""
         multiQueryResults = embeddings.search(multiQuery, 1)
-        print("test query: \n", multiQueryResults)
 
         uniqueMultiResults = [query for query in multiQueryResults if not any(query['text'] == sr['text'] for sr in search_results)]
 
@@ -56,8 +55,8 @@ def searchInEmbeddingsDB_multiquery(query_list, embeddings):
         json.dump(formattedOutput, f, indent = 2, ensure_ascii = False)
     return formattedOutput
 
-# filePath = "/vol/web/media/transcripts/transcript0.json"
-filePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript0.json"
+filePath = "/vol/web/media/transcripts/transcript0.json"
+# filePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript0.json"
 
 def exportOutput(search_results, load_transripts, formattedOutput, query1, query2 = ""):
 
@@ -90,8 +89,8 @@ def exportOutput(search_results, load_transripts, formattedOutput, query1, query
     return formattedOutput
 
 def loadEmbeddings():
-    # embeddingsPath = "/vol/web/media/embeddings"
-    embeddingsPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/embeddings/"
+    embeddingsPath = "/vol/web/media/embeddings"
+    # embeddingsPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/embeddings/"
     embeddings = txtai.embeddings.Embeddings({
             "method": "transformers", 
             "content": True,

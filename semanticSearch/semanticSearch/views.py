@@ -19,7 +19,7 @@ def searchQuery(request):
     searchList = [item.strip() for item in searchQuery.split(',')]
 
     searchQuery = searchEmbeddings.searchInEmbeddingsDB_multiquery(searchList, embeddings)
-
+    
     return render(request, 'home.html', {'search_query':searchQuery}) 
 
 def server(request):

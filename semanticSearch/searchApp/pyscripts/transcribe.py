@@ -9,8 +9,8 @@ from imagecaption import generateCaptions
 
 logging.basicConfig(level=logging.INFO)
 
-# filePath = "/vol/web/media/audio/" # container
-filePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/audio/"
+filePath = "/vol/web/media/audio/" # container
+# filePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/audio/"
 
 print("transcribe: ", os.getcwd())
 
@@ -61,8 +61,8 @@ def transcribeTexts(model_id, startCount):
 
         result.append(model.transcribe(audio, language="en"))
     
-    # outputFileName = '/vol/web/media/data/model.json'
-    outputFileName = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/model.json"
+    outputFileName = '/vol/web/media/data/model.json'
+    # outputFileName = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/model.json"
     with open(outputFileName, 'w', encoding='utf-8') as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
@@ -71,7 +71,8 @@ def transcribeTexts(model_id, startCount):
 def exportTranscript(result, meta, startCount):
     # Dictionary to store transcripts grouped by index
     transcripts_dict = {}
-    videoPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/media/"
+    # videoPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/media/"
+    videoPath = "/vol/web/media/media/"
 
     for j in range(len(result)):
         resultIndex = result[j]
@@ -94,7 +95,8 @@ def exportTranscript(result, meta, startCount):
             rand = random.random()
             if rand >= 0.8:
                 extract_frame(videoFileName, start)
-                imagePath = '/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/images/temp_frame.jpg'
+                imagePath = "/vol/web/media/images/temp_frame.jpg"
+                # imagePath = '/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/images/temp_frame.jpg'
                 # image = Image.open(imagePath)
                 frameCap = generateCaptions(imagePath)
                 # caption = Caption()
@@ -134,8 +136,8 @@ def exportTranscript(result, meta, startCount):
     else:
         name = "transcript1.json"
 
-    # outputFileName = f'/vol/web/media/transcripts/{name}'
-    outputFileName = f'/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/{name}'
+    outputFileName = f'/vol/web/media/transcripts/{name}'
+    # outputFileName = f'/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/{name}'
 
     # Write the structured data to a JSON file
     with open(outputFileName, 'w', encoding='utf-8') as f:
@@ -143,8 +145,8 @@ def exportTranscript(result, meta, startCount):
 
 def transcribe(startCount):
     try:
-        # metaFilePath = "/vol/web/media/data/metaData.csv"
-        metaFilePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/metaData.csv"
+        metaFilePath = "/vol/web/media/data/metaData.csv"
+        # metaFilePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/metaData.csv"
 
         metaData = loadMetaData(metaFilePath, startCount)
         result = transcribeTexts(model_id, startCount)

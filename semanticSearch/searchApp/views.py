@@ -89,7 +89,6 @@ def uploadVideo(request):
 def trainVideos(request):
     
     export_model_to_csv()
-    print(os.getcwd())
     
     try:
     # Start the subprocess
@@ -159,8 +158,8 @@ def check_progress(request):
         return JsonResponse({"status": "error", "message": "Failed to check process status."})
     
 def export_model_to_csv():
-    # dumpDataPath = '/vol/web/media/data/metaData.csv'
-    dumpDataPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/metaData.csv"
+    dumpDataPath = '/vol/web/media/data/metaData.csv'
+    # dumpDataPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/metaData.csv"
 
     os.makedirs(os.path.dirname(dumpDataPath), exist_ok=True)
 

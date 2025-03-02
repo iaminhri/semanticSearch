@@ -15,7 +15,8 @@ def extract_frame(video_path, time_sec):
 
     if ret:
         # Save the frame as an image file
-        frame_filename = f'/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/images/temp_frame.jpg'
+        frame_filename = "/vol/web/media/images/temp_frame.jpg"
+        # frame_filename = f'/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/images/temp_frame.jpg'
         cv2.imwrite(frame_filename, frame)
         return frame_filename
     return None

@@ -22,25 +22,23 @@ def main():
     extensionList = ('*.mp4', '*.flv')
     print("Current Working Dir: ", os.getcwd())
     error = "No Videos Found!!!"
-    # For Container setup
-    # videoPath = "/vol/web/media/media/"
-    # dataD = '/vol/web/media/data/counter.txt'
-    # path1 = '/vol/web/media/transcripts/transcript0.json'
-    # path2 = '/vol/web/media/transcripts/transcript1.json'
 
-    videoPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/media/"
-    dataD = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/counter.txt"
-    path1 = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript0.json"
-    path2 = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript1.json"
+    # For Docker Container setup
+    videoPath = "/vol/web/media/media/" 
+    dataD = '/vol/web/media/data/counter.txt'
+    path1 = '/vol/web/media/transcripts/transcript0.json'
+    path2 = '/vol/web/media/transcripts/transcript1.json'
+
+    # videoPath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/media/"
+    # dataD = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/data/counter.txt"
+    # path1 = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript0.json"
+    # path2 = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript1.json"
 
     with open(dataD, 'r') as counter:
         line = counter.read().strip()
         parts = line.split(',')
         startCount = int(parts[0])
         status = parts[1]
-
-    print(startCount)
-    print(status)
 
     if checkForFiles(videoPath) and status == "False":
         # getAudiosByDirectory(videoPath, extensionList)

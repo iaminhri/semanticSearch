@@ -66,7 +66,8 @@ def embeddingIndex(transcripts):
                 )
             )
 
-    outputFile = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcriptData.json"
+    # outputFile = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcriptData.json"
+    outputFile = "/vol/web/media/transcriptData.json"
     with open(outputFile, 'w', encoding='utf-8') as f:
         json.dump(transcriptData, f, indent=2, ensure_ascii=False)
 
@@ -74,8 +75,8 @@ def embeddingIndex(transcripts):
 
 def indexEmbeddingsMain():
     # load transcripts data from file
-    # filePath = "/vol/web/media/transcripts/transcript0.json"
-    filePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript0.json"
+    filePath = "/vol/web/media/transcripts/transcript0.json"
+    # filePath = "/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/transcripts/transcript0.json"
 
     transcript_dict = loadTranscriptData(filePath=filePath)
 
@@ -108,5 +109,5 @@ def indexEmbeddingsMain():
 
     embeddings.index(embeddingIndex(transcript_dict))
 
-    # embeddings.save("/vol/web/media/embeddings/")
-    embeddings.save("/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/embeddings/")
+    embeddings.save("/vol/web/media/embeddings/")
+    # embeddings.save("/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/embeddings/")

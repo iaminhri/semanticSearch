@@ -29,6 +29,7 @@ RUN python -m venv /py && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
     mkdir -p /vol/web/media/audio && \
+    mkdir -p /vol/web/media/images && \
     mkdir -p /vol/web/media/data && \
     mkdir -p /vol/web/media/embeddings && \
     mkdir -p /vol/web/media/media && \
@@ -42,6 +43,7 @@ RUN python -m venv /py && \
 # RUN chmod -R 755 /vol/web
 
 COPY ./semanticSearch/media/media/* /vol/web/media/media/
+COPY ./semanticSearch/media/images/* /vol/web/media/images/
 COPY ./semanticSearch/media/data/* /vol/web/media/data/
 COPY ./semanticSearch/media/transcripts/* /vol/web/media/transcripts/
 COPY ./semanticSearch/media/embeddings/* /vol/web/media/embeddings/
