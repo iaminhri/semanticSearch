@@ -1,22 +1,23 @@
 import cv2
+import logging
 
-def extract_frame(video_path, time_sec):
-    # Open the video file
+logging.basicConfig(level=logging.INFO)
+
+def extract_frame(video_path, time_sec, output_path="/vol/web/media/images/temp_frame.jpg"):
+    logging.info(f"Extracting frame from {video_path} at {time_sec}s")
     cap = cv2.VideoCapture(video_path)
     if not cap.isOpened():
-        print("Error: Could not open video.")
+        logging.error("Error: Could not open video.")
         return None
-    
-    # Set the time position to the specified second
-    cap.set(cv2.CAP_PROP_POS_MSEC, time_sec*1000)
 
+    cap.set(cv2.CAP_PROP_POS_MSEC, time_sec * 1000)
     ret, frame = cap.read()
     cap.release()
 
     if ret:
-        # Save the frame as an image file
-        frame_filename = "/vol/web/media/images/temp_frame.jpg"
-        # frame_filename = f'/Users/hridoyrahman/Desktop/COSC 4F90/SemanticVideoSearch/semanticSearch/media/images/temp_frame.jpg'
-        cv2.imwrite(frame_filename, frame)
-        return frame_filename
-    return None
+        cv2.imwrite(output_path, frame)
+        logging.info(f"Frame saved to {output_path}")
+        return output_path
+    else:
+        logging.error("Failed to extract frame.")
+        return None
