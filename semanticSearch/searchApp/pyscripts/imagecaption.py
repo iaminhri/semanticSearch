@@ -7,7 +7,7 @@ import logging
 processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
-def generate_captions(image_path):
+def generateCaptions(image_path):
     try:
         image = Image.open(image_path).convert("RGB")
         inputs = processor(image, return_tensors="pt")
