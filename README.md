@@ -1,6 +1,9 @@
 # AI Video Retrieval System
 
-## Query & Result
+## Query & Retrieval
+![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/query_retrieval.png)
+
+## Query & Retrieval - Compact View
 ![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/result.jpg)
 
 ## Upload Videos
