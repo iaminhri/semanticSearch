@@ -1,16 +1,16 @@
 # AI Video Retrieval System
 
-## Home Page
-![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/Index.png)
+## Query & Result
+![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/result.jpg)
 
-## Upload Page
-![Image 2 Alt Text](Project%20Display/UploadPage.png "Upload Page")
+## Upload Videos
+![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/uploadForm.png)
 
-## Video Gallery
-![Image 3 Alt Text](Project%20Display/Showcase.png "Video Gallery")
+## Video Archive and Index
+![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/IndexVideos.png)
 
-## Result 1
-![Image 4 Alt Text](Project%20Display/result1.png "result show")
+## Single Query Search
+![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/Single%20Query.png)
 
-## Result 1 Continued
-![Result 5 Continued](Project%20Display/result2.png "Result 1 Continued Segment")
+## Multiple Query Search
+![Web Interface: Home Page](https://github.com/iaminhri/semanticSearch/blob/master/images/MultipleQuery.png)
