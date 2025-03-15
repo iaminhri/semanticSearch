@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="reports/">
-    <img src="logo.png" alt="Logo" width="200" height="140">
+    <img src="https://github.com/iaminhri/semanticSearch/blob/master/images/result.jpg" alt="Logo" width="200" height="140">
   </a>
 
   <h3 align="center">AI Video Retrieval: A Semantic Search & Timestamp Alignment System</h3>
