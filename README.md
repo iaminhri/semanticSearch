@@ -9,15 +9,13 @@
 -->
 
 ![GitHub followers](https://img.shields.io/github/followers/iaminhri?style=for-the-badge&logo=github)
-![GitHub issue/pull request detail](https://img.shields.io/github/issues/detail/state/iaminhri/semanticSearch/13?style=for-the-badge&logo=github&color=red)
-![GitHub commit merge status](https://img.shields.io/github/commit-status/iaminhri/semanticSearch/master/16992ed940d07678f1a3d2bbb85d2843eba7c668?style=for-the-badge&logo=github)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/iaminhri/semanticSearch?style=for-the-badge&logo=github)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="reports/">
-    <img src="images/result.jpg" alt="Logo" width="1000" height="240">
+    <img src="images/result.jpg" alt="Logo" width="1000" height="540">
   </a>
 
   <h3 align="center">AI Video Retrieval: A Semantic Search & Timestamp Alignment System</h3>
