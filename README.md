@@ -24,7 +24,6 @@
     View Project
     <br />
     <a href="#usage">View Demo</a>
-    &middot;
   </p>
 </div>
 
