@@ -31,7 +31,7 @@
     <img src="logo.png" alt="Logo" width="200" height="140">
   </a>
 
-  <h3 align="center">AI-powered Newsletter and Social Media Content Generator</h3>
+  <h3 align="center">AI Video Retrieval: A Semantic Search & Timestamp Alignment System</h3>
 
   <p align="center">
     Read Project Report
@@ -41,9 +41,6 @@
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -80,40 +77,27 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The AI Video Retrieval (AIVR) system enhances video search by integrating deep learning models for speech recognition, image captioning, and embedding generation. It uses txtai for indexing and Django for integration, enabling real-time video processing and semantic search. The system retrieves precise video timestamps based on natural language queries. A usability study confirms its improved retrieval accuracy and efficiency over traditional methods. Future extensions include OCR, object detection, and action recognition for enhanced relevance.
 
 ## Project Summary  
 
 ### Our Goal  
-Our goal is to develop a user-friendly website that will have a user profile and dashboard.  
-It will also enable users to input a list of news and social media sources, topics, keywords, locations, or industries to generate personalized newsletters and social media content using advanced AI techniques such as Natural Language Processing (NLP).
-
+To develop an AI-powered video retrieval system that enables precise semantic search within videos by leveraging deep learning models for automatic speech recognition, image captioning, and embedding generation. The system aims to enhance retrieval accuracy, efficiency, and usability by indexing multimodal data and providing timestamp-aligned search results, with potential extensions for OCR, object detection, and action recognition.
 The content will be formatted for various platforms, including:
-- Email newsletters  
-- Twitter posts  
-- LinkedIn updates  
-- Instagram captions  
-
-This ensures both relevance and platform compatibility. Additionally, users will receive automated notifications at intervals they specify.
 
 ---
 
 ### Objectives  
-- Save time by automating content aggregation, summarization, and delivery.
-- Provide users with highly relevant and tailored content.
-- Offer Software-as-a-Service (SaaS) to enable seamless interaction and personalized content delivery.
-- Share generated content with other media platforms.
-
+- **Develop an AI-driven semantic video retrieval system** – Leverage deep learning models for speech recognition, image captioning, and embedding generation to enable accurate and efficient video search.
+- **Enhance retrieval accuracy and timestamp precision** – Implement multimodal indexing and vector embeddings to improve search relevance and ensure precise timestamp alignment for retrieved segments.
+- ** Ensure scalability and real-time processing** – Design a framework that supports real-time video uploads, indexing, and search queries while allowing future enhancements like OCR, object detection, and action recognition.
 ---
 
 ### Contribution of team members is located inside the /contributions/Contributions Sheet.pdf
 
-
 Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 
