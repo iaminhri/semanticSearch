@@ -23,9 +23,6 @@
   <p align="center">
     Read Project Report
     <br />
-    <a href="reports/"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
     <a href="#usage">View Demo</a>
     &middot;
   </p>
