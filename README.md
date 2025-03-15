@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="reports/">
-    <img src="images/result.jpg" alt="Logo" width="1000" height="540">
+    <img src="images/result.jpg" alt="Logo" width="1000" height="340">
   </a>
 
   <h3 align="center">AI Video Retrieval: A Semantic Search & Timestamp Alignment System</h3>
