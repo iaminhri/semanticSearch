@@ -72,8 +72,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -93,83 +91,50 @@ The content will be formatted for various platforms, including:
 - ** Ensure scalability and real-time processing** – Design a framework that supports real-time video uploads, indexing, and search queries while allowing future enhancements like OCR, object detection, and action recognition.
 ---
 
-### Contribution of team members is located inside the /contributions/Contributions Sheet.pdf
-
-Use the `BLANK_README.md` to get started.
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
+* [![Docker][Docker.com]][Docker-url]
 * [![Django][Django.com]][Django-url]
 * [![Python][Python.com]][Python-url]
 * [![HTML][HTML.com]][HTML-url]
 * [![CSS][CSS.com]][CSS-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The project can be viewed and run locally by installing the following tools.
 
 ### Prerequisites
 
-1. Use Git Clone to create a local repo
+1. Install Docker Container
+   ```sh
+   https://www.docker.com/products/docker-desktop/
+   ```
+2. Install GitHub
   ```sh
-  git clone https://github.com/iaminhri/COSC-4P02.git
+  https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
   ```
-2. Change git remote url to avoid accidental pushes to base project. For more git operation refer to this [Documentation]([resources/GitHub Commands.pdf](https://github.com/iaminhri/COSC-4P02/blob/master/resources/GitHub%20Commands.pdf))
+3. Use Git Clone to create a local repo
   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
+  git clone https://github.com/iaminhri/semanticSearch.git
   ```
-
-First Install Virtual Environment, makes life easier. 
-3. Python Virtual Environment for MAC or Linux, For windows use VSCode virtual environment
+4. Build the docker project by using the docker-compose-deploy.yml file.
   ```sh
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install --upgrade pip
+  docker-compose -f docker-compose-deploy build
   ```
-4. Install The requirements file
+5. Run the Project:
   ```sh
-  pip install -r requirements.txt
-  ```
-
-  
-5. Some Django Application Useful Commands
-* Shows all subcommands available
-  ```sh
-   django-admin
-  ```
-* Starts a new project
-  ```sh
-   django-admin startproject file_name
-  ```
-* To run the project
-  ```sh
-   python manage.py runserver 
-  ```
-* Change the port to access the localhost website
-  ```sh
-   python manage.py runserver 1313
-  ```
-* Creates an App functionality
-  ```sh
-   python manage.py startapp app_name 
+  docker-compose -f docker-compose-deploy up
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
