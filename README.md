@@ -26,7 +26,7 @@
     <a href="reports/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="#usage">View Demo</a>
     &middot;
   </p>
 </div>
@@ -105,26 +105,26 @@ The project can be viewed and run locally by installing the following tools.
 ### Installation, Building, and Running the Project
 
 1. Install Docker Container
-   ```sh
-   https://www.docker.com/products/docker-desktop/
-   ```
+ ```sh
+ https://www.docker.com/products/docker-desktop/
+ ```
 2. Install GitHub
-  ```sh
-  https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
-  ```
+ ```sh
+ https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
+ ```
 3. Use Git Clone to create a local repo
-  ```sh
-  git clone https://github.com/iaminhri/semanticSearch.git
-  cd semanticSearch
-  ```
+ ```sh
+ git clone https://github.com/iaminhri/semanticSearch.git
+ cd semanticSearch
+ ```
 4. Build the docker project by using the docker-compose-deploy.yml file.
-  ```sh
-  docker-compose -f docker-compose-deploy build
-  ```
+ ```sh
+ docker-compose -f docker-compose-deploy build
+ ```
 5. Run the Project:
-  ```sh
-  docker-compose -f docker-compose-deploy up
-  ```
+ ```sh
+ docker-compose -f docker-compose-deploy up
+ ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
