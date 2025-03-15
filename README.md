@@ -9,15 +9,15 @@
 -->
 
 ![GitHub followers](https://img.shields.io/github/followers/iaminhri?style=for-the-badge&logo=github)
-![GitHub issue/pull request detail](https://img.shields.io/github/issues/detail/state/iaminhri/COSC-4P02/13?style=for-the-badge&logo=github&color=red)
-![GitHub commit merge status](https://img.shields.io/github/commit-status/iaminhri/COSC-4P02/master/16992ed940d07678f1a3d2bbb85d2843eba7c668?style=for-the-badge&logo=github)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/iaminhri/COSC-4P02?style=for-the-badge&logo=github)
+![GitHub issue/pull request detail](https://img.shields.io/github/issues/detail/state/iaminhri/semanticSearch/13?style=for-the-badge&logo=github&color=red)
+![GitHub commit merge status](https://img.shields.io/github/commit-status/iaminhri/semanticSearch/master/16992ed940d07678f1a3d2bbb85d2843eba7c668?style=for-the-badge&logo=github)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/iaminhri/semanticSearch?style=for-the-badge&logo=github)
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="reports/">
-    <img src="images/Single%20Query.png" alt="Logo" width="1000" height="240">
+    <img src="images/result.png" alt="Logo" width="1000" height="240">
   </a>
 
   <h3 align="center">AI Video Retrieval: A Semantic Search & Timestamp Alignment System</h3>
@@ -182,7 +182,7 @@ The authors wish to acknowledge the Responsible & Applied Machine Learning Labor
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)][Docker-url]
+[[Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)][Docker-url]
 [Docker-url]: https://www.docker.com/
 
 [Django.com]: https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green
