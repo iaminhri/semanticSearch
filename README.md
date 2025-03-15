@@ -21,7 +21,7 @@
   <h3 align="center">AI Video Retrieval: A Semantic Search & Timestamp Alignment System</h3>
 
   <p align="center">
-    Read Project Report
+    View Project
     <br />
     <a href="#usage">View Demo</a>
     &middot;
