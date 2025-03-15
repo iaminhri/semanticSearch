@@ -59,6 +59,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#top-contributors">Top Contributors</a></li>
+    <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -155,8 +157,8 @@ The project can be viewed and run locally by installing the following tools.
 
 ### Top contributors:
 
-<a href="https://github.com/iaminhri/COSC-4P02/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=iaminhri/COSC-4P02" />
+<a href="https://github.com/iaminhri/semanticSearch/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iaminhri/semanticSearch" />
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
