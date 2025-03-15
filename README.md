@@ -123,7 +123,10 @@ The project can be viewed and run locally by installing the following tools.
  ```sh
  docker-compose -f docker-compose-deploy up
  ```
-
+6. Access The Website:
+ ```sh
+ 127.0.0.1:8080
+ ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
