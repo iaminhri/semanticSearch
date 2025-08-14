@@ -117,11 +117,11 @@ The project can be viewed and run locally by installing the following tools.
  ```
 4. Build the docker project by using the docker-compose-deploy.yml file.
  ```sh
- docker-compose -f docker-compose-deploy build
+ docker-compose -f docker-compose-deploy.yml build
  ```
 5. Run the Project:
  ```sh
- docker-compose -f docker-compose-deploy up
+ docker-compose -f docker-compose-deploy.yml up
  ```
 6. Access The Website:
  ```sh
